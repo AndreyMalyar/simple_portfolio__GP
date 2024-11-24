@@ -820,3 +820,59 @@
   font-size: 16px;
   resize: none;
 }
+
+.help{
+  background-color: $secondary-bg-color;
+  padding: 139px 0;
+  @include _991(padding, 48px 0);
+  &__container{
+    @include flex(space-between, center);
+    @include _991-block{
+      flex-direction: column;
+      gap: 40px;
+      align-items: flex-start;
+    }
+  }
+  &__box{
+    width: 470px;
+    @include _1199(width, 50%);
+  }
+  &__title{
+    margin: 20px 0 28px;
+    color: $secondary-text-color;
+  }
+  &__btn{
+    margin-top: 34px;
+    background-color: $orange-color;
+    color: $primary-text-color;
+  }
+  &__img{
+    max-width: 570px;
+    @include _1199(max-width, 50%);
+    @include _991-block{
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      order: -1;
+    }
+  }
+}
+
+.collage{
+  background-color: $secondary-bg-color;
+  &__container{
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    @include _991-block{
+      flex-wrap: wrap;
+    }
+  }
+  &__img{
+    width: calc(100% / 6);
+    @include _991(width, calc(100% / 3));
+    @include _575(width, calc(100% / 2));
+  }
+}
