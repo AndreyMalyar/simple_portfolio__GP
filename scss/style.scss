@@ -10,6 +10,48 @@
 @import "base/mixins";
 @import "base/containers";
 
+/* globs */
+.btn{
+  padding: 17px 27px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: calc(1rem * 0.9);
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+}
+
+.description{
+  font-size: 1rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $orange-color;
+}
+
+.section{
+  &__title{
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -1px;
+    @include _991-block{
+      font-size: 40px;
+      line-height: 48px;
+    }
+  }
+}
+
+.descriptionImg{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: $orange-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* end globs */
+
 /* page layout(верстка) */
 
 .nav{
@@ -112,12 +154,7 @@
     text-align: center;
     line-height: 64px;
     color: $secondary-text-color;
-
-    @include _991-block{
-      max-width: 314px;
-      font-size: 40px;
-      line-height: 48px;
-    }
+    @include _991(max-width, 380px);
   }
   &__cards{
     margin: 60px 0;
@@ -192,9 +229,6 @@
   }
   &__title{
     color: $primary-text-color;
-
-    @include _1199(margin-bottom, 50px);
-    @include _767(margin-bottom, 20px);
   }
   &__btn{
     color: $primary-text-color;
@@ -209,7 +243,9 @@
     @include flex(space-between);
     @include _1199-block{
       flex-direction: column;
+      margin-top: 50px;
     }
+    @include _767(margin-top, 20px);
   }
   &__card{
     position: relative;
@@ -462,7 +498,7 @@
     width: 430px;
     text-align: center;
     color: $secondary-text-color;
-
+    @include _991(width, 320px);
     @include _575-block{
       font-size: 40px;
       line-height: 48px;
