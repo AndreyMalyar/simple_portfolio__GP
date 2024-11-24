@@ -50,7 +50,7 @@
   }
 }
 @mixin _1199-block{
-  @media (max-width: var$laptop-size){
+  @media (max-width: $laptop-size){
     @content;
   }
 }
