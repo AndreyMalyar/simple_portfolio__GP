@@ -449,3 +449,64 @@
     @include _991(width, 60%);
   }
 }
+
+.testimonials{
+  padding: 108px 0 96px;
+  background-color: $secondary-bg-color;
+
+  &__description{
+    text-align: center;
+  }
+  &__title{
+    margin: 20px auto 0;
+    width: 430px;
+    text-align: center;
+    color: $secondary-text-color;
+
+    @include _575-block{
+      font-size: 40px;
+      line-height: 48px;
+      width: 100%;
+    }
+  }
+  &__cards{
+    margin: 64px auto 64px;
+    @include flex(center, flex-start);
+
+    @include _991-block{
+      flex-direction: column;
+    }
+  }
+  &__card{
+    width: calc(100% / 3);
+    border: 1px solid #F3D1BF;
+    padding: 48px;
+    color: $secondary-text-color;
+
+    @include _991(width, 100%);
+    &-text{
+      margin: 36px 0 64px;
+    }
+
+    &_active{
+      background-color: $primary-text-color;
+      border-left: none;
+      border-right: none;
+
+      @include _991-block{
+        border-left: 1px solid #F3D1BF;
+        border-right: 1px solid #F3D1BF;
+        border-top: none;
+        border-bottom: none;
+      }
+    }
+  }
+  &__user{
+    @include flex(left);
+    gap: 24px;
+  }
+  &__btn{
+    display: block;
+    margin: 0 auto;
+  }
+}
