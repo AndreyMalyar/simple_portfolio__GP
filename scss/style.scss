@@ -510,3 +510,88 @@
     margin: 0 auto;
   }
 }
+
+.faq{
+  padding: 160px 0 120px;
+  @include _991(padding, 48px 0);
+
+  &__wrap{
+    @include flex(space-between, top);
+    gap: 20px;
+
+    @include _991-block{
+      flex-direction: column;
+      justify-content: left;
+      align-items: flex-start;
+    }
+  }
+  &__content{
+    max-width: 470px;
+    color: $primary-text-color;
+    @include _991(max-width, 100%);
+  }
+  &__title{
+    font-size: 40px;
+    line-height: 48px;
+    margin: 20px 0 30px;
+  }
+  &__btn{
+    margin-top: 29px;
+  }
+  &__row{
+    @include flex(space-between, center);
+    margin: 130px auto 0;
+    gap: 40px;
+    @include _767-block{
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.accordion{
+  max-width: 570px;
+  @include _1199(max-width, 50%);
+  @include _991-block{
+    max-width: 100%;
+    margin-top: 40px;
+  }
+  &__item{
+    border: 1px solid red;
+    &-btn{
+      width: 100%;
+      padding: 40px;
+      @include flex(space-between, center);
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 700;
+      border: none;
+      outline: none;
+      ///* Text_Dark */
+      //color: #391400;
+      color: #fff;
+      &-icon{
+        width: 32px;
+        height: 32px;
+        @include flex();
+        background-color: $orange-color;
+        border-radius: 50%;
+        transform: rotate(180deg);
+        transition: 0.3s;
+
+        &.active{
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+  &__body{
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s;
+
+  }
+  &__content{
+    padding: 0 50px 44px;
+  }
+}
