@@ -11,3 +11,60 @@
 @import "base/containers";
 
 /* page layout(верстка) */
+
+.nav{
+  @include flex(space-between);
+  &__logo{
+    width: fit-content;
+    @include flex();
+    gap: 14px;
+    &-name{
+      font-weight: 700;
+      font-size: calc(1rem * 1.5);
+      line-height: calc(1rem * 2);
+    }
+  }
+  &__menu{
+    width: 515px;
+    @include flex(space-between);
+  }
+  &__button{
+    &:hover{
+      background-color: $gray-color;
+      color: $primary-bg-color;
+    }
+    &:active{
+      filter: brightness(120%);
+    }
+  }
+}
+
+.header{
+  background-color: $primary-bg-color;
+  padding: 16px 0 139px;
+  color: $primary-text-color;
+
+  &__content{
+    margin-top: 122px;
+    @include flex();
+  }
+  &__title{
+    margin: 24px 0;
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 80px;
+    letter-spacing: -2px;
+  }
+  &__text{
+    width: 100%;
+    max-width: 470px;
+    color: $gray-color;
+  }
+  &__btn{
+    margin-top: 34px;
+    background-color: $orange-color;
+    &:hover{
+      //?????
+    }
+  }
+}

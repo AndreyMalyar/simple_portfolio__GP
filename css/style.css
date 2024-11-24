@@ -163,5 +163,63 @@ body {
 }
 
 /* page layout(верстка) */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__logo {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+.nav__logo-name {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.nav__menu {
+  width: 515px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__button:hover {
+  background-color: rgba(255, 255, 255, 0.64);
+  color: #28293E;
+}
+.nav__button:active {
+  filter: brightness(120%);
+}
+
+.header {
+  background-color: #28293E;
+  padding: 16px 0 139px;
+  color: #fff;
+}
+.header__content {
+  margin-top: 122px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__title {
+  margin: 24px 0;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 80px;
+  letter-spacing: -2px;
+}
+.header__text {
+  width: 100%;
+  max-width: 470px;
+  color: rgba(255, 255, 255, 0.64);
+}
+.header__btn {
+  margin-top: 34px;
+  background-color: #EF6D58;
+}
 
 /*# sourceMappingURL=style.css.map */
