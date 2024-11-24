@@ -344,3 +344,48 @@
     margin-right: 40px;
   }
 }
+
+.features{
+  background-color: $primary-bg-color;
+  padding: 151px 0 159px;
+
+  &__content{
+    @include flex(space-between);
+    gap: 16px;
+  }
+  &__box{
+    width: 440px;
+    color: $primary-text-color;
+  }
+  &__title{
+    width: 397px;
+    margin: 20px 0 28px;
+  }
+  &__list{
+    margin-top: 24px;
+    &-item{
+      color: $gray-color;
+      padding-left: 48px;
+      position: relative;
+      &::before{
+        content: url("../images/features-icon-1.svg");
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-color: $orange-color;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        @include flex();
+      }
+      &:not(:first-child){
+        margin-top: 16px;
+      }
+    }
+  }
+  &__img{
+    width: 50%;
+  }
+}
