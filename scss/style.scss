@@ -595,3 +595,139 @@
     padding: 0 50px 44px;
   }
 }
+
+.ourBlog{
+  padding: 92px 0 84px;
+  background-color: $secondary-bg-color;
+  &__row{
+    @include flex(space-between);
+    margin-top: 20px;
+    @include _575-block{
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+    }
+  }
+  &__title{
+    width: 340px;
+    @include _575-block{
+      width: 100%;
+    }
+  }
+  &__btn{
+    background-color: $primary-text-color;
+  }
+  &-wrap{
+    @include flex(space-between, top);
+    margin-top: 64px;
+    gap: 30px;
+
+    @include _991(flex-direction, column);
+
+    &__big{
+      width: 770px;
+      @include _991(width, 100%);
+      &-img{
+        @include _991(width, 100%);
+      }
+      &-desc{
+        margin-top: 26px;
+        font-size: 20px;
+        line-height: 32px;
+        color: $secondary-text-color;
+      }
+      &-title{
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 48px;
+        color: $secondary-text-color;
+        margin-top: 31px;
+      }
+      &-date{
+        color: rgba(57, 20, 0, 0.64);
+        margin-top: 20px;
+      }
+    }
+    &__narrow{
+      width: 270px;
+
+      @include _991-block{
+        @include flex(space-between, top);
+        width: 100%;
+        gap: 40px;
+      }
+      @include _767-block{
+        flex-direction: column;
+      }
+      &-img{
+        @include _991(width, 100%);
+      }
+
+
+      &-desc{
+        font-size: 20px;
+        line-height: 32px;
+        color: $secondary-text-color;
+        margin-top: 26px;
+      }
+      &-title{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        color: $secondary-text-color;
+        margin: 15px 0;
+      }
+      &-date{
+        color: rgba(57, 20, 0, 0.64);
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &__newsletter{
+    margin-top: 68px;
+    padding-top: 56px;
+    border-top: 1px solid #F3D1BF;
+    @include flex(space-between, center);
+    @include _991-block{
+      justify-content: center;
+      flex-direction: column;
+      gap: 40px;
+    }
+    &-inner{
+      @include _991(text-align, center);
+    }
+
+    &-title{
+      font-size: 24px;
+      line-height: 32px;
+      color: $secondary-text-color;
+    }
+    &-text{
+      color: rgba(57, 20, 0, 0.64);
+    }
+    &-form{
+      @include _767-block{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+      }
+    }
+    &-email{
+      padding: 16px;
+      width: 370px;
+      outline: none;
+      border: none;
+      background-color: $primary-text-color;
+      margin-right: 30px;
+      @include _767(width, 100%);
+    }
+    &-btn{
+      padding: 16px 45px;
+      border: none;
+      outline: none;
+      background-color: $primary-text-color;
+      text-transform: uppercase;
+    }
+  }
+}
