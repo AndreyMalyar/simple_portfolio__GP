@@ -876,3 +876,74 @@
     @include _575(width, calc(100% / 2));
   }
 }
+
+.footer{
+  padding-top: 69px;
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    @include _767-block{
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+    }
+  }
+  &__nav{
+    @include flex(space-between, flex-start);
+    width: 772px;
+    color: $primary-text-color;
+    @include _1199(width, 700px);
+    @include _991(width, 520px);
+    @include _575-block{
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+    }
+  }
+  &__logo{
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+
+  &__menu{
+    @include _575(text-align, center);
+    &-subtitle{
+      color: $orange-color;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 16px;
+    }
+  }
+  &__row{
+    display: flex;
+    gap: 8px;
+    &-item{
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: $orange-color;
+      @include inline-flex();
+    }
+  }
+}
+
+.copyright{
+  margin-top: 68px;
+
+  &__container{
+    padding: 43px 15px 52px;
+    border-top: 1px solid $gray-color;
+    @include flex(space-between, center);
+    color: $primary-text-color;
+    @include _767-block{
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__warning{
+    @include flex(space-between, center);
+    width: 255px;
+  }
+}
