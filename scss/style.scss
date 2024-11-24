@@ -401,3 +401,51 @@
     }
   }
 }
+
+.getStarted{
+  background-color: #F9E5DA;
+  padding: 47px 0;
+  &__content{
+    @include flex(space-between);
+
+    @include _991-block{
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+    }
+  }
+  &__box{
+    width: 217px;
+
+    @include _991(width, 100%);
+  }
+  &__description{
+    text-align: center;
+  }
+  &__title{
+    font-size: 24px;
+    line-height: 32px;
+    color: $secondary-text-color;
+    margin: 13px 0 23px;
+
+    @include _991(text-align, center);
+  }
+  &__btn{
+    @include _991-block{
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &__text{
+    width: 370px;
+    color: $secondary-text-color;
+    @include _991-block{
+      text-align: center;
+      width: 100%;
+    }
+  }
+  &__img{
+    width: 338px;
+    @include _991(width, 60%);
+  }
+}
