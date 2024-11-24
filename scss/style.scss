@@ -348,14 +348,21 @@
 .features{
   background-color: $primary-bg-color;
   padding: 151px 0 159px;
+  @include _991(padding, 48px 0);
 
   &__content{
     @include flex(space-between);
     gap: 16px;
+    @include _991-block{
+      flex-direction: column;
+    }
   }
   &__box{
     width: 440px;
     color: $primary-text-color;
+    @include _991-block{
+      width: 100%;
+    }
   }
   &__title{
     width: 397px;
@@ -387,5 +394,10 @@
   }
   &__img{
     width: 50%;
+    @include _991-block{
+      width: 100%;
+      display: flex;
+      order: -1;
+    }
   }
 }
