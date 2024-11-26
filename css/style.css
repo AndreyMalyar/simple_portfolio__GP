@@ -577,7 +577,7 @@ body {
 }
 @media (max-width: 992px) {
   .features {
-    padding: 48px 0;
+    padding: 48px 0 70px;
   }
 }
 .features__content {
@@ -643,7 +643,19 @@ body {
 
 .getStarted {
   background-color: #F9E5DA;
-  padding: 47px 0;
+  padding: 60px 0 47px;
+  position: relative;
+}
+.getStarted__present {
+  position: absolute;
+  top: 0;
+  left: calc((100% - var(--container-width)) / 2 + var(--container-padding));
+  transform: translateY(-50%);
+}
+@media (max-width: 1200px) {
+  .getStarted__present {
+    left: 40px;
+  }
 }
 .getStarted__content {
   display: flex;

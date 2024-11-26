@@ -371,7 +371,7 @@
 .features{
   background-color: $primary-bg-color;
   padding: 151px 0 159px;
-  @include _991(padding, 48px 0);
+  @include _991(padding, 48px 0 70px);
 
   &__content{
     @include flex(space-between);
@@ -427,7 +427,17 @@
 
 .getStarted{
   background-color: #F9E5DA;
-  padding: 47px 0;
+  padding: 60px 0 47px;
+  position: relative;
+  &__present{
+    position: absolute;
+    top: 0;
+    left: calc((100% - var(--container-width)) / 2 + var(--container-padding));
+    transform: translateY(-50%);
+    @include _1199-block{
+      left: 40px;
+    }
+  }
   &__content{
     @include flex(space-between);
 
