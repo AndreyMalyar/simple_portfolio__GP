@@ -232,45 +232,40 @@
   }
   &__btn{
     color: $primary-text-color;
-    @include _767(margin-bottom, 50px);
+    @include _767(margin, 35px 0);
 
   }
   &__cards{
     width: 100%;
     max-width: 1400px;
     padding: 0 16px;
-    margin: 0 auto;
+    margin: 50px auto 0;
     @include flex(space-between);
     @include _1199-block{
-      flex-direction: column;
-      margin-top: 50px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
     }
-    @include _767(margin-top, 20px);
+    @include _767(gap, 0);
   }
   &__card{
-    position: relative;
     width: calc(100% / 3);
     border: 2px solid red;
-    margin-top: 80px;
-    //padding: 416px 0 51px 48px;
     padding: 16px;
-    overflow: hidden;
-      @include _1199-block{
-        width: 100%;
-        margin-top: 0;
-        text-align: center;
-      };
-    &:nth-child(even){
-      border-left: none;
-      border-right: none;
-      @include _1199-block{
-        border-left: 2px solid red;
-        border-right: 2px solid red;
-        border-top: none;
-        border-bottom: none;
-      }
+    @include flex();
+    @include _1199-block{
+      width: min(380px, calc(100% / 2));
     }
-    &-bg{}
+    @include _991-block{
+      width: min(350px, calc(100% / 2));
+    }
+    @include _767-block{
+      width: fit-content;
+    }
+    &-box{
+      position: relative;
+      overflow: hidden;
+    }
     &-btn{
       outline: none;
       border: none;
@@ -278,12 +273,8 @@
       padding: 10px;
       border-radius: 10px;
       position: absolute;
-      left: 48px;
-      bottom: 120px;
-      @include _1199-block{
-        left: calc(50% - 130px);
-        transform: translateX(-50%);
-      }
+      left: 30px;
+      bottom: 100px;
     }
     &-title{
       font-weight: 800;
@@ -292,12 +283,8 @@
       color: $primary-text-color;
       margin-top: 23px;
       position: absolute;
-      left: 48px;
-      bottom: 51px;
-      @include _1199-block{
-        left: calc(50% - 130px);
-        transform: translateX(-50%);
-      }
+      left: 30px;
+      bottom: 40px;
     }
   }
 }
